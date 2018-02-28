@@ -8,7 +8,7 @@
         public function get_annonce($intitule = FALSE){
             if($intitule === FALSE)
             {
-                $sql = 'select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation
+                $sql = 'select  DISTINCT o.nom_entreprise
                         from offre_stage o, utilisateur u
                         where o.email_utilisateur=u.ID_email and o.libre=1';
                 $query = $this->db->query($sql);
@@ -33,12 +33,20 @@
 
 
 
-        public function searche_entre($entereprise)
+        public function searche_entre($entereprise = NULL)
         {
+            if($entereprise != NULL)
+            {
             $query = $this->db->query("select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation
                   from offre_stage o, utilisateur u
                   where o.email_utilisateur=u.ID_email and o.nom_entreprise='$entereprise'");
-
+            }
+            else
+            {
+                $query = $this->db->query('select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation
+                        from offre_stage o, utilisateur u
+                        where o.email_utilisateur=u.ID_email and o.libre=1');
+            }
             return $query->result_array();
         }
     }

@@ -5,10 +5,11 @@
                 show_404();
             }
 
-            $entreprise = $this->input->get('entreprise');
-
-            $data['offre_stage'] = $this->Annonce->get_annonce();
-            $data['title'] = ucfirst($page);
+            $entereprise=$this->input->get('Location');
+            $data= array(
+                'resultat' => $this->Annonce->searche_entre($entereprise),
+                'offre_stage' => $this->Annonce->get_annonce()
+            );
             $this->load->view('templates/header');
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer');
@@ -17,7 +18,10 @@
         public function search ($page='home')
         {
             $entereprise=$this->input->get('Location');
-            $data['offre_stage']=$this->Annonce->searche_entre($entereprise);
+            $data= array(
+                'resultat' => $this->Annonce->searche_entre($entereprise),
+                'offre_stage' => $this->Annonce->get_annonce()
+            );
             $this->load->view('templates/header');
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer');

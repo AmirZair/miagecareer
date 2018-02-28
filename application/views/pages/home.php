@@ -55,7 +55,7 @@
         <!-- fin Filtre -->
 
         <div class="col-lg-8 col-md-10 mx-auto">
-            <?php foreach($offre_stage as $offre) : ?>
+            <?php foreach($resultat as $offre) : ?>
             <div class="post-preview">
                 <a href="<?php echo site_url('/offre/'.$offre['id']);?>">
                     <h2 class="post-title">
