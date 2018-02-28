@@ -48,8 +48,10 @@
                             <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
                         </div>
                     </div>
-                    <button class="text-center">valider</button>
-                </form>
+                    <div class="text-center">
+                    <button class="btn btn-info"><span class="glyphicon glyphicon-search"></span>  valider</button>
+                        </div>
+                    </form>
             </div>
         </div>
         <!-- fin Filtre -->
