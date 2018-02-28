@@ -6,11 +6,10 @@
                 <h3 align="center">Search Filter</h3>
                 <form class="form-horizontal">
                     <div class="form-group">
-                        <label for="location1" class="control-label">Location</label>
-                        <select class="form-control" name="" id="location1">
-                            <option value="">Any</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
+                        <label for="location1" class="control-label">Entreprise</label>
+                        <select class="form-control" name="" id="entreprise">
+                            <option value="0">CGI</option>
+                            <option value="1">Atos</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -55,6 +54,26 @@
         </div>
         <!-- fin Filtre -->
 
+        <script type="text/javascript">
+
+            var entreprise = '';
+
+            $('#entreprise').on('change', function(){
+                entreprise = this.entreprise;
+                console.log(entreprise);
+            });
+
+            $('#search').on('click', function(){
+                if(lien!=0){
+                    $(this).attr("href", "../service/search?lieu="+lien);
+
+                    //alert($('#lieu option[value="'+lien+'"]').text());
+                }
+                else{
+                    $(this).attr("href", "../service/show_all");
+                }
+            });
+        </script>
 
         <div class="col-lg-8 col-md-10 mx-auto">
             <?php foreach($offre_stage as $offre) : ?>
