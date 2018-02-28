@@ -30,4 +30,15 @@
             $query = $this->db->query($sql);
             return $query->row_array();
         }
+
+
+
+        public function searche_entre($entereprise)
+        {
+            $query = $this->db->query("select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation
+                  from offre_stage o, utilisateur u
+                  where o.email_utilisateur=u.ID_email and o.nom_entreprise='$entereprise'");
+
+            return $query->result_array();
+        }
     }

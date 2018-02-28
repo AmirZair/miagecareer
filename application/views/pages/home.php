@@ -1,15 +1,15 @@
-<!--Filtre-->
 <div class="container">
     <div class="row">
         <div class="col-lg-3 col-md-6 col-md-offset-3 col-lg-offset-0">
             <div class="well">
                 <h3 align="center">Search Filter</h3>
-                <form class="form-horizontal">
+                <form class="form-horizontal" action="<?=site_url('pages/search');?>" method="get">
                     <div class="form-group">
-                        <label for="location1" class="control-label">Entreprise</label>
-                        <select class="form-control" name="" id="entreprise">
-                            <option value="0">CGI</option>
-                            <option value="1">Atos</option>
+                        <label for="location1" class="control-label">Location</label>
+                        <select class="form-control" name="Location" id="location" >
+                            <?php foreach ($offre_stage as $offre) : ?>
+                                <option value="<?php echo $offre['nom_entreprise']?>"><?php echo $offre['nom_entreprise']?></option>
+                            <?php  endforeach;?>
                         </select>
                     </div>
                     <div class="form-group">
@@ -48,32 +48,11 @@
                             <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
                         </div>
                     </div>
-                    <p class="text-center"><a href="#" class="btn btn-danger glyphicon glyphicon-search" role="button"></a></p>
+                    <button class="text-center">valider</button>
                 </form>
             </div>
         </div>
         <!-- fin Filtre -->
-
-        <script type="text/javascript">
-
-            var entreprise = '';
-
-            $('#entreprise').on('change', function(){
-                entreprise = this.entreprise;
-                console.log(entreprise);
-            });
-
-            $('#search').on('click', function(){
-                if(lien!=0){
-                    $(this).attr("href", "../service/search?lieu="+lien);
-
-                    //alert($('#lieu option[value="'+lien+'"]').text());
-                }
-                else{
-                    $(this).attr("href", "../service/show_all");
-                }
-            });
-        </script>
 
         <div class="col-lg-8 col-md-10 mx-auto">
             <?php foreach($offre_stage as $offre) : ?>

@@ -13,4 +13,14 @@
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer');
         }
+
+        public function search ($page='home')
+        {
+            $entereprise=$this->input->get('Location');
+            $data['offre_stage']=$this->Annonce->searche_entre($entereprise);
+            $this->load->view('templates/header');
+            $this->load->view('pages/'.$page, $data);
+            $this->load->view('templates/footer');
+        }
+
     }
