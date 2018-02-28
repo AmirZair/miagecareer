@@ -5,8 +5,9 @@
                 show_404();
             }
 
-            $data['offre_stage'] = $this->Annonce->get_annonce();
+            $entreprise = $this->input->get('entreprise');
 
+            $data['offre_stage'] = $this->Annonce->get_annonce();
             $data['title'] = ucfirst($page);
             $this->load->view('templates/header');
             $this->load->view('pages/'.$page, $data);
