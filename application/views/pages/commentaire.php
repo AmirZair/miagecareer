@@ -18,10 +18,10 @@
         <div class="col-sm-5">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong>myusername</strong> <span class="text-muted">commented 5 days ago</span>
+                    <strong><?php echo $id_offre['id']; ?></strong> <span class="text-muted"><?php echo $id_offre['commentaire']; ?></span>
                 </div>
                 <div class="panel-body">
-                    Panel content
+                    <?php echo $id_offre['contenu']; ?>
                 </div><!-- /panel-body -->
             </div><!-- /panel panel-default -->
         </div><!-- /col-sm-5 -->

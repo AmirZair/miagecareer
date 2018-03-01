@@ -11,20 +11,24 @@ class Commentaire extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result_array();
     }
-/*
+
+    /**
+     * @param $id_offre
+     * @return mixed
+     */
     public function get_commentaire($id_offre)
     {
 
-            $sql = 'SELECT offre_stage.id,contenu,date_commentaire,id_offre 
-                    from commentaire inner join offre_stage on offre_stage.id ='.$id_offre;
+            $sql = 'SELECT c.ID,contenu,date_commentaire 
+                    FROM commentaire c ,offre_stage o WHERE c.ID = o.id and '.id_offre;
             $query = $this->db->query($sql);
             return $query->result();
 
             $id=$id_offre['id'];
             $contenu=$id_offre['contenu'];
-            $date_commentaire=$id_offre'commentaire'];
+            $date_commentaire=$id_offre'[commentaire'];
 
 
     }
-*/
+
 }
