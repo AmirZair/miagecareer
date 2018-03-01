@@ -4,7 +4,7 @@
         {
             $this->load->database();
         }
-
+/* hello*/
         public function get_all()
         {
             $sql = 'select  *
