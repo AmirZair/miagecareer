@@ -28,17 +28,20 @@
             $ville=$intitule['ville'];
             $txt=$intitule['txt'];
 
-            $sql = "select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation
-                        from offre_stage o, utilisateur u
-                        where o.email_utilisateur=u.ID_email";
+            $sql = "select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation, e.ville as ville
+                        from offre_stage o, utilisateur u, entreprise e
+                        where o.email_utilisateur=u.ID_email and e.nom_entreprise = o.nom_entreprise";
         if (!empty($entreprise))
             $sql .=" and o.nom_entreprise='$entreprise'" ;
         if (!empty($niveau))
             $sql .=" and o.niveau_etude= '$niveau'";
         if (!empty($duree))
             $sql .= " and duree='$duree'";
+        if (!empty($ville))
+                $sql .= " and ville='$ville'";
         if (!empty($txt))
             $sql .=" and (mission like '%$txt%' OR intitule like '%$txt%')" ;
+
 
             $query = $this->db->query($sql);
 
@@ -83,6 +86,17 @@
             return $query->result_array();
           }
       }
+
+        public function get_ville($ville=NULL)
+        {
+            if ($ville === NULL)
+            {
+                $query=$this->db->query("select DISTINCT e.ville as ville 
+                                         from entreprise e, offre_stage o
+                                         where e.nom_entreprise = o.nom_entreprise");
+                return $query->result_array();
+            }
+        }
 
         public function searche_entre($entereprise = NULL)
         {

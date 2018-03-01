@@ -10,9 +10,10 @@
                 'entreprise'=>$this->Annonce->get_entreprise(),
                 'offre_stage' => $this->Annonce->get_annonce(),
                 'niveau'=>$this->Annonce->get_niveau(),
-                'duree'=>$this->Annonce->get_duree()
+                'duree'=>$this->Annonce->get_duree(),
+                 'ville'=>$this->Annonce->get_ville()
             );
-            
+            print_r($data);
             $this->load->view('templates/header');
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer');
@@ -29,7 +30,8 @@
                 'entreprise'=>$this->Annonce->get_entreprise(),
           //      'offre_stage' => $this->Annonce->get_annonce(),
                 'niveau'=>$this->Annonce->get_niveau(),
-                'duree'=>$this->Annonce->get_duree()
+                'duree'=>$this->Annonce->get_duree(),
+                'ville'=>$this->Annonce->get_ville()
             );
             $this->load->view('templates/header');
             $this->load->view('pages/'.$page, $data);

@@ -35,7 +35,7 @@
                         <label for="ville" class="control-label">Ville</label>
                         <select class="form-control" name="ville" id="ville">
                           <option value="">Any</option>
-                      <?php foreach ($entreprise as $ville) : ?>
+                      <?php foreach ($ville as $ville) : ?>
                           <option value="<?php echo $ville['ville']?>"><?php echo $ville['ville']?></option>
                       <?php  endforeach;?>
                         </select>
