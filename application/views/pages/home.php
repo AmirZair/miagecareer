@@ -44,6 +44,7 @@
                         <label for="txt" class="control-label">Mot clé</label>
                         <input type="text" name="txt" class="form-control" id="txt" placeholder="Mot clé">
                     </div>
+<<<<<<< HEAD
               <div class="text-center">
                 <button class="btn btn-danger"><span class="glyphicon glyphicon-search"></span> Valider</button>
               </div>

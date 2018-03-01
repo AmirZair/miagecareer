@@ -5,6 +5,8 @@
             $this->load->database();
         }
 
+      
+
         public function get_annonce($intitule = FALSE){
             if($intitule === FALSE)
             {
