@@ -4,13 +4,14 @@
         {
             $this->load->database();
         }
-/* hello*/
+
         public function get_all()
         {
             $sql = 'select  *
                     from offre_stage';
             $query = $this->db->query($sql);
             return $query->result_array();
+            /*hello*/
         }
 
         public function get_annonce($intitule = FALSE){
