@@ -12,7 +12,7 @@
                 'niveau'=>$this->Annonce->get_niveau(),
                 'duree'=>$this->Annonce->get_duree()
             );
-            print_r($data['entreprise']);
+            
             $this->load->view('templates/header');
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer');
