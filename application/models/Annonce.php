@@ -5,7 +5,13 @@
             $this->load->database();
         }
 
-      
+        public function get_all()
+        {
+            $sql = 'select  *
+                    from offre_stage';
+            $query = $this->db->query($sql);
+            return $query->result_array();
+        }
 
         public function get_annonce($intitule = FALSE){
             if($intitule === FALSE)
