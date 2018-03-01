@@ -1,0 +1,484 @@
+/*
+	*********************************
+	********** Header Style *********
+	*********************************
+*/
+.navbar-brand{
+  margin-top: 0px;
+	padding-top: 10px; 
+	font-size: 13px; 
+	font-family: 'Century Gothic';
+}
+/*
+	*********************************
+	******* Navigation Style ********
+	*********************************
+*/
+.myNav{ 
+	margin-top: 0px;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	border: 0px;
+	font-size: 13px; 
+	font-family: 'Century Gothic';
+}
+
+.no-padding{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.no-margin{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.underline{
+	text-decoration: underline;
+}
+.push-left{
+	float: left;
+}
+.push-right{
+	float: right;
+}
+.center{
+	margin: auto;
+}
+.dim{
+	width: 100%;
+	height: calc(100vh - 45px);
+	max-height: calc(100vh - 45px);
+}
+.dim1{
+	width: 100%;
+	min-height: calc(100vh - 45px);
+}
+.dim2{
+	width: 100%;
+	min-height: calc(100vh - 124px);
+}
+/*
+	*******************************
+	******* Footer Style **********
+	*******************************
+*/
+.my-footer{
+	width: 100%;
+	position: static;
+	bottom: 0;
+	margin-top: 10px;
+	border: 0px;  
+	
+	font-family: 'Century Gothic';
+	font-size: 13px; 
+	text-align: center;
+}
+.element{
+	display: inline-block;
+}
+
+.element a, footer a{
+	color: #fff;
+	text-decoration: none; 
+}
+
+.element-link a:hover{
+	text-decoration: underline;
+}
+
+.actualite{
+	border: 3px solid #000;
+	border-radius: 10px;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.actu-desc{
+	border-top: 1px solid #000;
+	padding: 5px;
+	margin-top: 5px;
+}
+/*
+	***************************************
+	*********** Invite Styles *************
+	***************************************
+*/
+.invite{
+	min-height: 586px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	box-sizing: border-box;
+}
+.my-modal{
+	background-color: rgba(255,255,255,0.9);
+	width: 750px;
+	height: 550px;
+	max-height: 600px;	
+}
+.invite-modal{
+	width: 750px;
+	height: 500px;
+	max-height: 550px;
+	display: flex;
+	flex-direction: flex-start;
+	flex-wrap: wrap;
+}
+
+.invite-img, .invite-img-modal{
+	width: 200px;
+	height: 200px;
+	border: 1px solid #222222;
+	border-radius: 360px;
+	margin: auto;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.invite-img-modal{
+	width: 120px;
+	height: 120px;
+	order : 1;
+	border : 1px solid #222222;
+	cursor: initial;
+}
+.invite-img-container, .invite-img-container-modal{
+	width: 210;
+	height: 220px;
+	margin-top: 10px;
+	margin-right: 20px;
+	box-sizing: border-box;
+	order: 1;
+}
+.invite-img-container-modal{
+	width: 120px;
+	height: 120px;
+	margin-top: 0px;
+	order: 1;
+}
+.invite-info{
+	width: 75%;
+	height: 120px;
+	margin-top: 0px;
+	box-sizing: border-box;
+	order: 2;
+}
+
+.invite-desc{
+	width: 98%;
+	height: 400px;
+	box-sizing: border-box;
+	font-size: 13px;
+	order : 3;
+}
+.qst-rsp{
+	background-color: rgba(0,0,0,0.2);
+	border: 3px solid #222222;
+	border-radius: 10px;
+	margin-top: 10px;
+	padding-right: 10px; 
+}
+/*
+	*********************************
+	*********** FAG Style ***********
+	*********************************
+*/
+.qst-rsp p, .qst-rsp legend{
+	margin: 2px;
+	overflow-wrap: break-word;
+}
+/*
+	************************************
+	********** Evenement Style *********
+	************************************
+*/
+.evenement-container{
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.evenement{
+	width: 300px;
+	height: 390px;
+	font-family: 'Century Gothic';
+	box-sizing: border-box;
+	margin: 15px;
+}
+
+.evn-head{
+	background-color: #AD1457;
+	width: 300px;
+	height: 55px;
+	padding: 10px;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	font-style: italic;
+}
+
+.evn-body{
+	background-color: #8e44ad;
+	width: 300px;
+	height: 270px;
+	padding: 10px;
+	box-sizing: border-box;
+	font-size: 13px;
+}
+.evn-body fieldset legend{
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'Century Gothic';
+	margin-top: 5px;
+	margin-bottom: 0px;	
+}
+.evn-footer{
+	background-color: #16a085;
+	width: 300px;
+	height: 65px;
+	padding: 10px;
+	box-sizing: border-box;
+	font-size: 13px;
+	text-align: center;
+	font-weight: bold;
+}
+/*
+	************************************
+	************* side Style ***********
+	************************************
+*/
+.aside{
+	height: calc(100vh - 45px);
+	background-color: #222222;
+	font-size: 14px;
+	font-family: 'Century Gothic';
+	font-weight: normal;
+	border-top: 1px solid red;
+	margin-top: 0px;
+	color : white;
+}
+.aside input, .aside select{
+	height: 25px;
+	padding: 0px;
+}
+.aside input{
+	text-align: center;
+}
+.aside fieldset, .aside fieldset legend{
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 10px;	
+	margin-bottom: 20px;
+}
+.aside fieldset p{
+	font-weight: normal;
+}
+.aside a{
+	margin-top: 20px;
+}
+/*
+	*******************************
+	******** Service style ********
+	*******************************
+*/
+#lieu{
+	height: 26px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 15px;
+}
+/*
+	********************************************
+	*********** Back-Office Styles *************
+	********************************************
+*/
+.title{
+	font-weight: bold;
+	font-family: 'Cookie';
+	font-size: 30px;
+	text-align: center;
+	background-color: #d83924;
+}
+.back-office-nav{
+	min-width: 400px;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	border: 0px;
+	font-family: 'Century Gothic';
+	color: black;
+	background-color: #d83915;
+}
+.panel-button{
+	background-color: #1a2225;
+	cursor: pointer;
+}
+.panel-button a{
+	color: #fff;
+}
+.side-panel{
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	color: #fff;
+	background-color: #222d31;
+	max-width: 200px;
+	
+	height: calc(100vh - 45px);
+ 	
+}
+.side-panel ul{
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	list-style: none;
+}
+.side-element{
+	max-height: 40px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	border-top: 1px solid #1a2225; 
+}
+.side-element:hover{
+	background-color:  #1a2225;
+}
+.side-element a{
+	padding-left: 10px;
+	text-align: center;
+	line-height: 40px;
+	text-decoration: none;
+}
+.side-element:hover a{
+	color: #fff;
+	text-decoration: none;
+}
+.user{
+	width: 200px;
+	height: 45px;
+	float: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #d83915; 
+}
+.user-text{
+	display: inline-block; 
+	font-size: 11px; 
+	font-weight: bold;
+}
+.logout{
+	float: right;
+	width: 100px;
+	height: 45px;
+	background-color: #d83924; 
+}
+
+.logout a{
+	float: right;
+	font-size: 14px;
+	color: black;
+}
+
+@media (max-width:850px){
+	.title{
+		clear: both;
+	}
+	.side-panel{
+		width: 40px;
+	}
+	.logout{
+		background-color: #d83915;
+	}
+	.icon-text{
+		visibility: hidden;
+	}
+}	
+/*
+	*********************************************
+	*********** Back-office elements ************
+	*********************************************
+*/
+.modal{
+	margin-top: 30px;
+}
+.user-info{
+	box-sizing: border-box;
+	width: 600px;
+	margin: auto;
+	margin-top : 50px;
+	padding: 20px;
+	font-family: 'Comic Sans MS', cursive;
+	font-size: 18px;
+	
+	/*border : 1px solid black;*/
+
+}
+.user-info button{
+	width: 250px;
+	margin: 30px;
+}
+
+@media(min-width: 800px){
+	.user-info{
+		width: 650px;
+		font-size: 18px;
+	}
+	.user-info h1{
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.user-info button{
+		margin-left: 150px;
+	}
+}
+
+@media(max-width: 650px){
+	.user-info{
+		width: 400px;
+		font-size: 16px;
+	}
+	.user-info h1{
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.user-info button{
+		margin-left: 50px;
+	}
+}
+
+@media(max-width: 475px){
+	body{
+		min-width: 360px;
+	}
+	.user-info{
+		width: 300px;
+		font-size: 16px;
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+	.user-info h1{
+		font-size: 20px;
+		font-weight: bold;
+	}
+	.user-info button{
+		margin: 0px;
+		margin-top: 30px;
+	}
+	#wd{
+		width: 300px;
+	}
+}
