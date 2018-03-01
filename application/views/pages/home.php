@@ -70,7 +70,7 @@
                 </a>
                 <p class="post-meta">Posté par
                     <?php echo $offre['nom'].' '.$offre['prenom']; ?>
-                    on <?php echo $offre['date_creation']; ?></p>
+                    au <?php echo $offre['date_creation']; ?></p>
             </div>
             <hr>
             <?php endforeach; ?>
