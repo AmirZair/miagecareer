@@ -15,4 +15,10 @@ class Admin extends CI_Controller{
         $this->load->view('Admin/templates/header');
         $this->load->view('Admin/pages/gerer_offres',$data);
     }
+
+    public function delete_offre($id)
+    {
+        if(!empty($id)) $this->Annonce->remove_annonce($id);
+        header("Location: ".base_url()."/admin/gerer_offre");
+    }
 }

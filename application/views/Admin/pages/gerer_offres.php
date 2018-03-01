@@ -29,7 +29,7 @@
                 echo '<td>'.$offre['nom_entreprise'].'</td>';
                 echo '<td style="text-align: center;">'.$offre['date_creation'].'</td>';
                 echo '<td style="text-align: center;">
-										<a href="../question/delete/'.$offre['id'].'"><span style="color:red;" class="glyphicon glyphicon-trash"></span></a>
+										<a href="../admin/delete_offre/'.$offre['id'].'" Onclick="return ConfirmDelete();"><span style="color:red;" class="glyphicon glyphicon-trash"></span></a>
 									</td>';
                 echo '</tr>';
             }
@@ -44,4 +44,16 @@
     $(document).ready(function() {
         $('#mytable').dataTable();
     } );
+
+
+    function ConfirmDelete()
+    {
+        var x = confirm("Voulez vous supprimer l'offre de stage ?");
+        if (x)
+            return true;
+        else
+            return false;
+    }
+
+
 </script>

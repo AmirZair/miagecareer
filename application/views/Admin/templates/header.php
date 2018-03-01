@@ -62,15 +62,11 @@
                 <li id="panel-button" class="side-element panel-button">
                     <a><span class="glyphicon glyphicon-menu-hamburger"> </span> <span class="icon-text"> Reduire l'onglet</span></a>
                 </li>
-                <li class="side-element"><a id="gerer-festival" href="../festival/gerer"><span class="glyphicon glyphicon-music"></span> <span class="icon-text">Informations du Festival</span></a></li>
-                <li class="side-element"><a href="../actualite/gerer"><span class="glyphicon glyphicon-stats"> </span> <span class="icon-text">Gérer les Actualites</span></a></li>
-                <li class="side-element"><a href="../evenement/gerer"><span class="glyphicon glyphicon-calendar"> </span> <span class="icon-text">Gérer les Evenements</span></a></li>
-                <li class="side-element"><a href="../invite/gerer"><span class="glyphicon glyphicon-user"> </span> <span class="icon-text">Gérer les Invites</span></a></li>
-                <li class="side-element"><a href="../service/gerer"><span class="glyphicon glyphicon-cog"> </span> <span class="icon-text">Gérer les Services</span></a></li>
-                <li class="side-element"><a href="../question/gerer"><span class="glyphicon glyphicon-question-sign" > </span> <span class="icon-text">Gérer la F.A.Q</span></a></li>
-                <li class="side-element"><a href="../Objet_trouve/gerer"><span class="glyphicon glyphicon-shopping-cart"> </span> <span class="icon-text">Gérer les Objets Trouves</span></a></li>
-                <li class="side-element"><a href="../ticket/gerer"><span class="glyphicon glyphicon-file"> </span> <span class="icon-text">Gérer les Tickets</span></a></li>
-                <li class="side-element"><a href="../compte/gerer"><span class="glyphicon glyphicon-lock"> </span> <span class="icon-text">Gérer les Organisateurs</span></a></li>
+                <li class="side-element"><a href="../admin/gerer_offre"><span class="glyphicon glyphicon-stats"> </span> <span class="icon-text">Gérer les offres</span></a></li>
+                <li class="side-element"><a href=""><span class="glyphicon glyphicon-calendar"> </span> <span class="icon-text">Gérer l'historique des offres</span></a></li>
+                <li class="side-element"><a href=""><span class="glyphicon glyphicon-user"> </span> <span class="icon-text">Gérer les utilisateurs</span></a></li>
+                <li class="side-element"><a href=""><span class="glyphicon glyphicon-cog"> </span> <span class="icon-text">Gérer les Entreprises</span></a></li>
+                <li class="side-element"><a href=""><span class="glyphicon glyphicon-question-sign" > </span> <span class="icon-text">Gérer les commentaires</span></a></li>
             </ul>
         </div>
     </div>

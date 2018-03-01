@@ -11,7 +11,6 @@
                     from offre_stage';
             $query = $this->db->query($sql);
             return $query->result_array();
-            /*hello*/
         }
 
         public function get_annonce($intitule = FALSE){
@@ -100,5 +99,10 @@
                         where o.email_utilisateur=u.ID_email and o.libre=1');
             }
             return $query->result_array();
+        }
+
+        public function remove_annonce($id)
+        {
+            $this->db->delete('offre_stage', array('id' => $id));  // Produces: // DELETE FROM mytable  // WHERE id = $id
         }
     }
