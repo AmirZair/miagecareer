@@ -5,57 +5,58 @@
                 <h3 align="center">Search Filter</h3>
                 <form class="form-horizontal" action="<?=site_url('pages/search');?>" method="get">
                     <div class="form-group">
-                        <label for="location1" class="control-label">Location</label>
-                        <select class="form-control" name="Location" id="location" >
-                            <?php foreach ($offre_stage as $offre) : ?>
-                                <option value="<?php echo $offre['nom_entreprise']?>"><?php echo $offre['nom_entreprise']?></option>
+                        <label for="location1" class="control-label">Entreprise</label>
+                        <select class="form-control" name="entreprise" id="entreprise" >
+                                <option value="">Any</option>
+                            <?php foreach ($entreprise as $entreprise) : ?>
+                                <option value="<?php echo $entreprise['nom_entreprise']?>"><?php echo $entreprise['nom_entreprise']?></option>
                             <?php  endforeach;?>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="type1" class="control-label">Type</label>
-                        <select class="form-control" name="" id="type1">
-                            <option value="">Any</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
+                        <label for="niveau_etude" class="control-label">Niveau d'étude</label>
+                        <select class="form-control" name="niveau_etude" id="niveau_etude">
+                          <option value="">Any</option>
+                      <?php foreach ($niveau as $niveau) : ?>
+                          <option value="<?php echo $niveau['niveau_etude']?>"><?php echo $niveau['niveau_etude']?></option>
+                      <?php  endforeach;?>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="pricefrom" class="control-label">Min Price</label>
-                        <div class="input-group">
-                            <div class="input-group-addon" id="basic-addon1">$</div>
-                            <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
-                        </div>
+                        <label for="duree" class="control-label">Durée</label>
+                        <select class="form-control" name="duree" id="duree">
+                          <option value="">Any</option>
+                      <?php foreach ($duree as $duree) : ?>
+                          <option value="<?php echo $duree['duree']?>"><?php echo $duree['duree']?></option>
+                      <?php  endforeach;?>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label for="pricefrom" class="control-label">Min Price</label>
-                        <div class="input-group">
-                            <div class="input-group-addon" id="basic-addon1">$</div>
-                            <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
-                        </div>
+                        <label for="ville" class="control-label">Ville</label>
+                        <select class="form-control" name="ville" id="ville">
+                          <option value="">Any</option>
+                      <?php foreach ($entreprise as $ville) : ?>
+                          <option value="<?php echo $ville['ville']?>"><?php echo $ville['ville']?></option>
+                      <?php  endforeach;?>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <label for="pricefrom" class="control-label">Min Price</label>
-                        <div class="input-group">
-                            <div class="input-group-addon" id="basic-addon1">$</div>
-                            <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
-                        </div>
+                        <label for="txt" class="control-label">Mot clé</label>
+                        <input type="text" name="txt" class="form-control" id="txt" placeholder="Mot clé">
                     </div>
-                    <div class="form-group">
-                        <label for="priceto" class="control-label">Max Price</label>
-                        <div class="input-group">
-                            <div class="input-group-addon" id="basic-addon2">$</div>
-                            <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                    <button class="text-center">valider</button>
-                </form>
+              <div class="text-center">
+                <button class="btn btn-danger"><span class="glyphicon glyphicon-search"></span> Valider</button>
+              </div>
+               </form>
             </div>
         </div>
         <!-- fin Filtre -->
 
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <?php foreach($resultat as $offre) : ?>
+        <div class="col-lg-8 col-md-10 mx-auto" id="offres">
+          <?php if (empty($offre_stage)) {?>
+          <h2 class="text-center">Aucune offre ne correspond à ces critères</h2>
+        <?php }?>
+            <?php foreach($offre_stage as $offre) : ?>
             <div class="post-preview">
                 <a href="<?php echo site_url('/offre/'.$offre['id']);?>">
                     <h2 class="post-title">
