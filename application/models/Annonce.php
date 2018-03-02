@@ -52,8 +52,7 @@
         {
           if ($entreprise === NULL)
             {
-              $query=$this->db->query("select distinct nom_entreprise,ville from offre_stage
-              NATURAL JOIN  entreprise");
+              $query=$this->db->query("select distinct nom_entreprise from offre_stage");
               return $query->result_array();
             }
 
@@ -118,5 +117,10 @@
         public function remove_annonce($id)
         {
             $this->db->delete('offre_stage', array('id' => $id));  // Produces: // DELETE FROM mytable  // WHERE id = $id
+        }
+
+        public function update()
+        {
+
         }
     }
