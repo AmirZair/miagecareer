@@ -147,4 +147,9 @@
         {
             $this->db->delete('offre_stage', array('id' => $id));  // Produces: // DELETE FROM mytable  // WHERE id = $id
         }
+
+        public function update()
+        {
+
+        }
     }
