@@ -32,7 +32,7 @@
             $txt=$intitule['txt'];
             $sql = "select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation, e.ville as ville";
             if ($h!=FALSE)
-            $sql.=",m.nom,m.prenom ";
+            $sql.=",m.nom as mnom,m.prenom  as mprenom ";
             $sql.="from offre_stage o, utilisateur u, entreprise e,maitre_stage m
                         where o.email_utilisateur=u.ID_email and e.nom_entreprise = o.nom_entreprise";
         if (!empty($entreprise))
