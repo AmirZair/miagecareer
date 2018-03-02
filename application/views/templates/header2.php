@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo $offre_stage['intitule']; ?></title>
+    <title>Miage career</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,6 @@
 
     <!-- Custom scripts for this template -->
     <script src="<?php echo base_url(); ?>/lib/js/clean-blog.min.js"></script>
-
 </head>
 
 <body>
@@ -48,7 +47,10 @@
                     <a class="nav-link" href="/miagecareer">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url('/historique');?>">Historique</a>
+                    <a class="nav-link" href="historique">Historique</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="post.html">Contact</a>
@@ -68,8 +70,8 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1 class="display-4"><?php echo $offre_stage['intitule']; ?></h1>
-                    <span class="subheading"><?php echo $offre_stage['nom_entreprise'].' | début le : '.$offre_stage['date_debut'].' | '.$offre_stage['duree'].' Mois'; ?></span>
+                    <h1 class="display-4">Historique de nos offres</h1>
+                    <span class="subheading">Historique des offres parises par nos miagistes</span>
                 </div>
             </div>
         </div>

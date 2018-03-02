@@ -9,4 +9,7 @@ class Offre extends CI_Controller{
         $this->load->view('pages/offre', $data);
         $this->load->view('templates/footer');
     }
+
+
+
 }

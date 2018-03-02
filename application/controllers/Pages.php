@@ -5,6 +5,24 @@
                 show_404();
             }
 
+            $data= array(
+                'entreprise'=>$this->Annonce->get_entreprise(),
+                'offre_stage' => $this->Annonce->get_annonce(),
+                'niveau'=>$this->Annonce->get_niveau(),
+                'duree'=>$this->Annonce->get_duree(),
+                 'ville'=>$this->Annonce->get_ville()
+            );
+
+            $this->load->view('templates/header');
+            $this->load->view('pages/'.$page, $data);
+            $this->load->view('templates/footer');
+        }
+
+        public function view_h($page = 'home'){
+            if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
+                show_404();
+            }
+
             $entereprise=$this->input->get('entreprise');
             $data= array(
                 'entreprise'=>$this->Annonce->get_entreprise(),
@@ -13,7 +31,7 @@
                 'duree'=>$this->Annonce->get_duree(),
                  'ville'=>$this->Annonce->get_ville()
             );
-            print_r($data);
+
             $this->load->view('templates/header');
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer');
@@ -25,7 +43,7 @@
         {
             $datas=$this->input->get();
             $data= array(
-                'resultat' => $this->Annonce->searche_entre($datas['entreprise']),
+              //  'resultat' => $this->Annonce->searche_entre($datas['entreprise']),
                 'offre_stage' => $this->Annonce->get_annonce($datas),
                 'entreprise'=>$this->Annonce->get_entreprise(),
           //      'offre_stage' => $this->Annonce->get_annonce(),
@@ -38,4 +56,5 @@
             $this->load->view('templates/footer');
         }
 
+        
     }
