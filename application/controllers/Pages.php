@@ -13,7 +13,6 @@
                 'duree'=>$this->Annonce->get_duree(),
                  'ville'=>$this->Annonce->get_ville()
             );
-            print_r($data);
             $this->load->view('templates/header');
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer');

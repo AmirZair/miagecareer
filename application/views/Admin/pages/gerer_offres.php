@@ -1,3 +1,5 @@
+<?php include('Modals/offre_modal_update.php') ?>
+
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <script type="text/javascript" src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
@@ -14,6 +16,7 @@
                 <th>niveau</th>
                 <th>Entreprise</th>
                 <th>en ligne</th>
+                <th>M.à.j</th>
                 <th>Supprimer</th>
             </tr>
             </thead>
@@ -28,6 +31,7 @@
                 echo '<td>'.$offre['niveau_etude'].'</td>';
                 echo '<td>'.$offre['nom_entreprise'].'</td>';
                 echo '<td style="text-align: center;">'.$offre['date_creation'].'</td>';
+                echo '<td style="text-align: center;"><a id="'.$offre['id'].'" class="update-offre"><span class="glyphicon glyphicon-edit"></span></a></td>';
                 echo '<td style="text-align: center;">
 										<a href="../admin/delete_offre/'.$offre['id'].'" Onclick="return ConfirmDelete();"><span style="color:red;" class="glyphicon glyphicon-trash"></span></a>
 									</td>';
@@ -54,6 +58,7 @@
         else
             return false;
     }
-
-
 </script>
+
+<!-- ******************************************************************** -->
+

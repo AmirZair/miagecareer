@@ -9,6 +9,7 @@ class Admin extends CI_Controller{
     public function gerer_offre()
     {
         $data['offres'] = $this->Annonce->get_all();
+        $data['entre'] = $this->Annonce->get_entreprise();
         if(empty($data['offres']))
             show_404();
 
