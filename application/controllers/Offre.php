@@ -8,6 +8,7 @@ class Offre extends CI_Controller{
         $this->load->view('templates/header_offre',$data);
         $this->load->view('pages/offre', $data);
         $this->load->view('pages/commentaire');
+        $this->load->view('pages/commentaire_saisie');
         $this->load->view('templates/footer');
     }
 }
