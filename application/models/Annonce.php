@@ -8,7 +8,8 @@
         public function get_all()
         {
             $sql = 'select  *
-                    from offre_stage';
+                    from offre_stage
+                    where libre=1';
             $query = $this->db->query($sql);
             return $query->result_array();
         }
@@ -148,8 +149,20 @@
             $this->db->delete('offre_stage', array('id' => $id));  // Produces: // DELETE FROM mytable  // WHERE id = $id
         }
 
-        public function update()
+        public function update($data)
         {
+            if(!empty($data))
+            {
+                $this->db->where('id', $data['id']);
+                $this->db->update('offre_stage', $data);
+            }
+        }
 
+        public function add($data)
+        {
+            if(!empty($data))
+            {
+                $this->db->insert('offre_stage', $data);
+            }
         }
     }

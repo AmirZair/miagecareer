@@ -10,12 +10,18 @@
 </footer>
 
 <!-- Contact Form JavaScript -->
+
+</body>
+<!-- Bootstrap core JavaScript -->
+<script src="<?php echo base_url(); ?>/lib/vendor/jquery/jquery.min.js"></script>
+<script src="<?php echo base_url(); ?>/lib/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="<?php echo base_url(); ?>/lib/js/clean-blog.min.js"></script>
 <script src="js/jqBootstrapValidation.js"></script>
 
 <script src="js/contact_me.js"></script>
 
 <!-- Custom scripts for this template -->
 <script src="js/clean-blog.min.js"></script>
-</body>
-
 </html>

@@ -23,12 +23,6 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url(); ?>/lib/css/clean-blog.css" rel="stylesheet">
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url(); ?>/lib/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url(); ?>/lib/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="<?php echo base_url(); ?>/lib/js/clean-blog.min.js"></script>
 </head>
 
 <body>
