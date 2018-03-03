@@ -17,7 +17,7 @@
         public function get_annonce($intitule = FALSE,$h=FALSE){
             if($intitule === FALSE)
             {
-                $sql = "select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,
+                $sql = "select distinct id,o.intitule,o.nom_entreprise,u.nom,u.prenom,o.date_debut,
                         date(o.date_creation) as date_creation
                         from offre_stage o, utilisateur u
                         where o.email_utilisateur=u.ID_email " ;
@@ -31,10 +31,10 @@
             $duree=$intitule['duree'];
             $ville=$intitule['ville'];
             $txt=$intitule['txt'];
-            $sql = "select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation, e.ville as ville";
-            if ($h!=FALSE)
+            $sql = "select distinct id,o.date_debut,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation, e.ville as ville";
+            if ($h!==FALSE)
             $sql.=",m.nom as mnom,m.prenom  as mprenom ";
-            $sql.="from offre_stage o, utilisateur u, entreprise e,maitre_stage m
+            $sql.=" from offre_stage o, utilisateur u, entreprise e,maitre_stage m
                         where o.email_utilisateur=u.ID_email and e.nom_entreprise = o.nom_entreprise";
         if (!empty($entreprise))
             $sql .=" and o.nom_entreprise='$entreprise'" ;
@@ -48,6 +48,8 @@
             $sql .=" and (mission like '%$txt%' OR intitule like '%$txt%')" ;
         if ($h!== FALSE)
         $sql.=" and o.libre=0 and m.email=o.email_maitre";
+        else
+            $sql.=" and o.libre=1";
             $query = $this->db->query($sql);
             return $query->result_array();
 

@@ -65,7 +65,7 @@
                             <?php echo $offre['intitule']; ?>
                         </h2>
                         <h3 class="post-subtitle">
-                            <?php echo $offre['nom_entreprise']; ?>
+                            <?php echo $offre['nom_entreprise']." | début : ".$offre['date_debut']; ?>
                         </h3>
                     </a>
                     <p class="post-meta">Posté par

@@ -17,7 +17,7 @@
             $this->load->view('templates/footer');
         }
 
-        public function search_h($page='home')
+        public function search_h($page='historique')
           {
             $datas=$this->input->get();
             $data= array(
