@@ -1,4 +1,5 @@
 <?php include('Modals/offre_modal_update.php') ?>
+<?php include('Modals/offre_modal_add.php') ?>
 
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <script type="text/javascript" src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -9,28 +10,26 @@
         <table id="mytable" class="table table-bordered table-striped table-hover table-condensedk">
             <thead>
             <tr>
-                <th>id</th>
-                <th>Intitule</th>
+                <th style="width: 10em;">Intitule</th>
                 <th>mission</th>
                 <th>duree</th>
                 <th>niveau</th>
                 <th>Entreprise</th>
-                <th>en ligne</th>
+                <th style="width: 4em;">date début</th>
                 <th>M.à.j</th>
-                <th>Supprimer</th>
+                <th>Sup</th>
             </tr>
             </thead>
             <tbody>
             <?php
             foreach ($offres as $offre) {
                 echo '<tr>';
-                echo '<td>'.$offre['id'].'</td>';
                 echo '<td>'.$offre['intitule'].'</td>';
                 echo '<td>'.$offre['mission'].'</td>';
                 echo '<td>'.$offre['duree'].' Mois'.'</td>';
                 echo '<td>'.$offre['niveau_etude'].'</td>';
                 echo '<td>'.$offre['nom_entreprise'].'</td>';
-                echo '<td style="text-align: center;">'.$offre['date_creation'].'</td>';
+                echo '<td>'.$offre['date_debut'].'</td>';
                 echo '<td style="text-align: center;"><a id="'.$offre['id'].'" class="update-offre"><span class="glyphicon glyphicon-edit"></span></a></td>';
                 echo '<td style="text-align: center;">
 										<a href="../admin/delete_offre/'.$offre['id'].'" Onclick="return ConfirmDelete();"><span style="color:red;" class="glyphicon glyphicon-trash"></span></a>
@@ -42,7 +41,7 @@
         </table>
     </div>
 
-    <button id="add-cmp" class="btn btn-primary form-control" style="margin-top: 50px;">Ajouter une offre</button>
+    <button id="add_offre" class="btn btn-primary form-control" style="margin-top: 50px;">Ajouter une offre</button>
 </div>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -60,5 +59,5 @@
     }
 </script>
 
-<!-- ******************************************************************** -->
+<!-- ***********************update********************************** -->
 

@@ -16,6 +16,7 @@
     <script type="text/javascript" src="<?php echo base_url(); ?>lib/Admin/js/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>lib/Admin/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>lib/Admin/js/datetimepicker.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.8.0/basic/ckeditor.js"></script>
 
     <script type="text/javascript">
         $( document ).ready(function() {
