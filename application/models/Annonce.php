@@ -165,4 +165,26 @@
                 $this->db->insert('offre_stage', $data);
             }
         }
+
+        public function atribution($data)
+        {
+            if(!empty($data))
+            {
+                $sql="select * from maitre_stage where email='".$data['email']."'";
+                $query = $this->db->query($sql);
+
+                if($query->num_rows() > 0)
+                {
+                    $sql="update offre_stage set libre=0, email_maitre='".$data['email']."' where id=".$data['id']."";
+                    $this->db->query($sql);
+                }
+                else
+                {
+                    $sql="insert into maitre_stage VALUES ('".$data['email']."','".$data['nom']."','".$data['prenom']."')";
+                    $this->db->query($sql);
+                    $sql="update offre_stage set libre=0, email_maitre='".$data['email']."' where id=".$data['id']."";
+                    $this->db->query($sql);
+                }
+            }
+        }
     }

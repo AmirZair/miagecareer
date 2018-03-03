@@ -1,5 +1,6 @@
 <?php include('Modals/offre_modal_update.php') ?>
 <?php include('Modals/offre_modal_add.php') ?>
+<?php include('Modals/attribution_modal.php') ?>
 
 <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <script type="text/javascript" src="http://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -18,6 +19,7 @@
                 <th style="width: 4em;">date début</th>
                 <th>M.à.j</th>
                 <th>Sup</th>
+                <th>rés</th>
             </tr>
             </thead>
             <tbody>
@@ -34,6 +36,7 @@
                 echo '<td style="text-align: center;">
 										<a href="../admin/delete_offre/'.$offre['id'].'" Onclick="return ConfirmDelete();"><span style="color:red;" class="glyphicon glyphicon-trash"></span></a>
 									</td>';
+                echo '<td style="text-align: center;"><a id="'.$offre['id'].'" class="att-offre"><span class="glyphicon glyphicon-briefcase"></span></a></td>';
                 echo '</tr>';
             }
             ?>

@@ -60,4 +60,20 @@ class Admin extends CI_Controller{
 
         header("Location: ".base_url()."/admin/gerer_offre");
     }
+
+    public function attribue()
+    {
+        $datas = array(
+            'id' => $this->input->post('offre_id2'),
+            'libre' => '0',
+            'email' => $this->input->post('email'),
+            'nom' => $this->input->post('nom'),
+            'prenom' => $this->input->post('prenom')
+        );
+
+        if(!empty($datas))
+            $this->Annonce->atribution($datas);
+
+        header("Location: ".base_url()."/admin/gerer_offre");
+    }
 }
