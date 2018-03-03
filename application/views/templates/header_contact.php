@@ -44,7 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Offres</a>
+                    <a class="nav-link" href="/miagecareer">Offres</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="historique">Historique</a>
@@ -64,14 +64,14 @@
 </nav>
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('https://narkae.files.wordpress.com/2014/10/198275-universite-paris-ouest-nanterre-la-defense-510x_.jpg?w=525')">
+<header class="masthead" style="background-image:url('https://images5.alphacoders.com/692/thumb-1920-692621.jpg')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1 class="display-4">Bienvenue sur le site MIAGE career</h1>
-                    <span class="subheading">Plein d'offres de stage se trouve sur ce site, par les miagistes pour les miagistes</span>
+                    <h1 class="display-4">Nous contacter</h1>
+                    <span class="subheading">Avoir des questions? nous avons des réponses</span>
                 </div>
             </div>
         </div>
