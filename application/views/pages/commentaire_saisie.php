@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>/lib/css/commentaire_saisie.css">
 <div class="container">
     <div class="row">
-        <h3>Status Upload Snipp</h3>
+       <!-- <h3>Status Upload Snipp</h3> -->
     </div>
 
     <div class="row">
@@ -15,8 +15,8 @@
             <div class="widget-area no-padding blank">
                 <div class="status-upload">
                     <form>
-                        <textarea placeholder="What are you doing right now?" ></textarea>
-                        <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+                        <textarea placeholder="Saisir un commentaire" ></textarea>
+                        <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i>Envoyer votre commentaire</button>
                     </form>
                 </div><!-- Status Upload  -->
             </div><!-- Widget Area -->
