@@ -16,17 +16,17 @@ class Commentaire extends CI_Model{
      * @param $id_offre
      * @return mixed
      */
+
+
     public function get_commentaire($id_offre)
     {
 
             $sql = 'SELECT c.ID,contenu,date_commentaire 
-                    FROM commentaire c ,offre_stage o WHERE c.ID = o.id and '.id_offre;
+                    FROM commentaire c,offre_stage o 
+                    WHERE o.id ='.$id_offre;
+
             $query = $this->db->query($sql);
             return $query->result();
-
-            $id=$id_offre['id'];
-            $contenu=$id_offre['contenu'];
-            $date_commentaire=$id_offre'[commentaire'];
 
 
     }

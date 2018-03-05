@@ -18,7 +18,7 @@
         <div class="col-sm-5">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong><?php echo $id_offre['id']; ?></strong> <span class="text-muted"><?php echo $id_offre['commentaire']; ?></span>
+                    <strong><?php echo $query['c.ID']; ?></strong> <span class="text-muted"><?php echo $id_offre['commentaire']; ?></span>
                 </div>
                 <div class="panel-body">
                     <?php echo $id_offre['contenu']; ?>
