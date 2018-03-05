@@ -42,7 +42,7 @@
                     <a class="nav-link" href="/miagecareer">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="historique">Historique</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>historique">Historique</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">Profile</a>
