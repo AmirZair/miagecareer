@@ -31,7 +31,7 @@
             $duree=$intitule['duree'];
             $ville=$intitule['ville'];
             $txt=$intitule['txt'];
-            $sql = "select distinct id,o.date_debut,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation, e.ville as ville";
+            $sql = "select distinct mission,duree,id,o.date_debut,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation, e.ville as ville";
             if ($h!==FALSE)
             $sql.=",m.nom as mnom,m.prenom  as mprenom ";
             $sql.=" from offre_stage o, utilisateur u, entreprise e,maitre_stage m
@@ -68,20 +68,20 @@
 
 
         public function get_offre_id($id){
-            $sql = 'select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation, mission, date_debut, niveau_etude, duree, libre
-                        from offre_stage o, utilisateur u
-                        where o.email_utilisateur=u.ID_email
+            $sql = 'select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,date(o.date_creation) as date_creation, mission, date_debut, niveau_etude, duree, libre,e.ville as ville
+                        from offre_stage o, utilisateur u, entreprise e
+                        where o.email_utilisateur=u.ID_email and e.nom_entreprise=o.nom_entreprise
                               and id='.$id;
             $query = $this->db->query($sql);
             return $query->row_array();
         }
 
         public function get_offre_h_id($id){
-            $sql = 'select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,
+            $sql = 'select id,o.intitule,o.nom_entreprise,u.nom,u.prenom,e.ville as ville,
             date(o.date_creation) as date_creation, mission, date_debut, niveau_etude,
             duree,m.nom,m.prenom,m.email
-                        from offre_stage o, utilisateur u,maitre_stage m
-                        where o.email_utilisateur=u.ID_email and o.email_maitre=m.email
+                        from offre_stage o, utilisateur u,maitre_stage m, entreprise e
+                        where o.email_utilisateur=u.ID_email and o.email_maitre=m.email and e.nom_entreprise=o.nom_entreprise
                               and id='.$id ;
             $query = $this->db->query($sql);
             return $query->row_array();

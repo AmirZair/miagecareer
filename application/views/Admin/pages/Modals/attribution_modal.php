@@ -11,7 +11,7 @@
 
                     <div class="form-group">
                         <label for="email_maitre">Email maitre de stage : </label>
-                        <input id="email" name="email" class="form-control" required="required"></input>
+                        <input id="email" name="email" class="form-control" required="required" type="email"></input>
                     </div>
 
                     <div class="form-group">

@@ -51,14 +51,28 @@
                         <select id="entreprise" name="entreprise" class="form-control height" required="required">
                             <option disabled selected value></option>
                             <?php
-                            if(!empty($offres)){
+
                                 foreach ($entre as $e) {
                                     echo '<option value="'.$e['nom_entreprise'].'">'.$e['nom_entreprise'].'</option>';
                                 }
-                            }
+
                             ?>
                         </select>
                         <input style="width: 48%; min-width: 150px;" class="btn" type="submit" value="Ajouter une nouvelle entreprise ?">
+                    </div>
+                    <div class="form-group">
+                        <label for="email_maitre">Email maitre de stage : </label>
+                        <input id="email" name="email" class="form-control" required="required" type="email"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nom">Nom : </label>
+                        <input id="Nom" name="nom" class="form-control" required="required"></input>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prenom">Prenom : </label>
+                        <input id="prenom" name="prenom" class="form-control" required="required"></input>
                     </div>
 
                     <div class="form-group" style="margin-top: 50px;">

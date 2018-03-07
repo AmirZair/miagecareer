@@ -27,6 +27,7 @@
                 'duree'=>$this->Annonce->get_duree(1),
                 'ville'=>$this->Annonce->get_ville(1)
             );
+
             $this->load->view('templates/header2');
             $this->load->view('pages/'.$page, $data);
             $this->load->view('templates/footer');
