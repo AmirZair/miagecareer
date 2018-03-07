@@ -18,17 +18,15 @@ class Commentaire extends CI_Model{
      */
 
 
-    public function get_commentaire($id_offre)
+    public function get_commentaire($offre)
     {
 
-            $sql = 'SELECT c.ID,contenu,date_commentaire 
-                    FROM commentaire c,offre_stage o 
-                    WHERE o.id ='.$id_offre;
+            $sql = 'SELECT c.contenu,date(c.date_commentaire) as date_commentaire,u.nom,u.prenom 
+                    FROM commentaire c, utilisateur u
+                    WHERE u.ID_email=c.id_user and id_offre ='.$offre;
 
             $query = $this->db->query($sql);
-            return $query->result();
-
-
+            return $query->result_array();
     }
 
 }

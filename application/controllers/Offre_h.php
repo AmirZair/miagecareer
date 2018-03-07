@@ -10,6 +10,7 @@ class Offre_h extends CI_Controller{
 
     public function view($offre){
     $data['offre_stage'] = $this->Annonce->get_offre_h_id($offre);
+    $data['commentaire'] = $this->Commentaire->get_commentaire($offre);
      if(empty($data['offre_stage']))
       show_404();
       
@@ -17,7 +18,8 @@ class Offre_h extends CI_Controller{
         $this->load->view('templates/header_offre',$data);
 
         $this->load->view('pages/offre_h', $data);
-
+        $this->load->view('pages/commentaire',$data);
+        $this->load->view('pages/commentaire_saisie');
         $this->load->view('templates/footer');
     }
 

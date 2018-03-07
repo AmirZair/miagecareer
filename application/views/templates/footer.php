@@ -13,6 +13,7 @@
 
 </body>
 <!-- Bootstrap core JavaScript -->
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="<?php echo base_url(); ?>/lib/vendor/jquery/jquery.min.js"></script>
 <script src="<?php echo base_url(); ?>/lib/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

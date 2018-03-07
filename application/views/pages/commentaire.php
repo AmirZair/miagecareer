@@ -1,9 +1,10 @@
-<link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
+<!------ Include the above in your HEAD tag ---------->
+<?php foreach ($commentaire as $comm) : ?>
 <div class="container">
+
+
+
     <div class="row">
         <div class="col-sm-12">
         </div><!-- /col-sm-12 -->
@@ -18,10 +19,15 @@
         <div class="col-sm-5">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong><?php echo $query['c.ID']; ?></strong> <span class="text-muted"><?php echo $id_offre['commentaire']; ?></span>
+
+                    <strong> <?php echo $comm['nom']." ".$comm['prenom']; ?></strong> <span class="text-muted"><?php echo $comm['date_commentaire']; ?></span>
                 </div>
                 <div class="panel-body">
-                    <?php echo $id_offre['contenu']; ?>
+                    <?php echo $comm['contenu']; ?>
+
                 </div><!-- /panel-body -->
             </div><!-- /panel panel-default -->
         </div><!-- /col-sm-5 -->
+    <br>
+
+<?php  endforeach;?>
