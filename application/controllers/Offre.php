@@ -13,12 +13,25 @@ class Offre extends CI_Controller{
         $data['commentaire'] = $this->Commentaire->get_commentaire($offre);
         if(empty($data['offre_stage']))
             show_404();
-        print_r($data);
         $this->load->view('templates/header_offre',$data);
         $this->load->view('pages/offre', $data);
         $this->load->view('pages/commentaire',$data);
-        $this->load->view('pages/commentaire_saisie');
+        //$this->load->view('pages/commentaire_saisie');
         $this->load->view('templates/footer');
+    }
+
+    public function add_comm(){
+
+        $datas = array(
+            'id_user' => $this->input->post('id_user'),
+            'contenu' => $this->input->post('commentaire'),
+            'id_offre' => $this->input->post('id_offre')
+        );
+
+        $this->Commentaire->add_commentaire($datas);
+        header("Location: ".base_url()."/offre/".$this->input->post('id_offre'));
+
+
     }
 
 

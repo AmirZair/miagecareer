@@ -29,4 +29,14 @@ class Commentaire extends CI_Model{
             return $query->result_array();
     }
 
+    public function add_commentaire($data)
+    {
+
+        if(!empty($data))
+        {
+            $this->db->insert('commentaire', $data);
+        }
+
+    }
+
 }

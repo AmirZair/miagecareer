@@ -14,8 +14,10 @@
         <div class="col-md-6">
             <div class="widget-area no-padding blank">
                 <div class="status-upload">
-                    <form>
-                        <textarea placeholder="Saisir un commentaire" ></textarea>
+                    <form id="comm" method="post" action="../offre/add_comm">
+                        <input id="id_user" type="hidden" name="id_user">
+                        <input id="id_offre" type="hidden" name="id_offre">
+                        <textarea id="commentaire" name="commentaire" placeholder="Saisir un commentaire" ></textarea>
                         <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i>Envoyer votre commentaire</button>
                     </form>
                 </div><!-- Status Upload  -->
@@ -24,3 +26,9 @@
 
     </div>
 </div>
+
+<script type="text/javascript">
+
+
+
+</script>
