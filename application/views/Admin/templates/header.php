@@ -66,7 +66,7 @@
                 <li class="side-element"><a href="<?php echo base_url(); ?>admin/gerer_offre"><span class="glyphicon glyphicon-stats"> </span> <span class="icon-text">Gérer les offres</span></a></li>
                 <li class="side-element"><a href="<?php echo base_url(); ?>admin/gerer_offre_h"><span class="glyphicon glyphicon-calendar"> </span> <span class="icon-text">Gérer l'historique des offres</span></a></li>
                 <li class="side-element"><a href=""><span class="glyphicon glyphicon-user"> </span> <span class="icon-text">Gérer les utilisateurs</span></a></li>
-                <li class="side-element"><a href=""><span class="glyphicon glyphicon-cog"> </span> <span class="icon-text">Gérer les Entreprises</span></a></li>
+                <li class="side-element"><a href="<?php echo base_url(); ?>admin/gerer_entreprise"><span class="glyphicon glyphicon-cog"> </span> <span class="icon-text">Gérer les Entreprises</span></a></li>
                 <li class="side-element"><a href=""><span class="glyphicon glyphicon-question-sign" > </span> <span class="icon-text">Gérer les commentaires</span></a></li>
             </ul>
         </div>

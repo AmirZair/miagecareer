@@ -1,5 +1,12 @@
 <?php
 class Offre extends CI_Controller{
+
+    public function __construct(){
+        parent::__construct();
+
+        $this->load->helper('url_helper');
+        $this->load->model('Commentaire');
+    }
     public function view($offre){
 
         $data['offre_stage'] = $this->Annonce->get_offre_id($offre);

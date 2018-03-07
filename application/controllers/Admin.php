@@ -6,6 +6,7 @@ class Admin extends CI_Controller{
 
         $this->load->helper('url_helper');
         $this->load->model('Maitre_stage');
+        $this->load->model('Entreprise');
     }
     public function view(){
         $this->load->view('Admin/templates/header');
@@ -32,6 +33,17 @@ class Admin extends CI_Controller{
 
         $this->load->view('Admin/templates/header');
         $this->load->view('Admin/pages/gerer_h_offres',$data);
+    }
+
+    public function gerer_entreprise()
+    {
+        $data['entreprise'] = $this->Entreprise->get_all();
+        if(empty($data))
+            show_404();
+
+        $this->load->view('Admin/templates/header');
+        $this->load->view('Admin/pages/gerer_entreprise',$data);
+
     }
 
     public function delete_offre($id)
