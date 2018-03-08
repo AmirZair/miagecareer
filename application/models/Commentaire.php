@@ -21,9 +21,9 @@ class Commentaire extends CI_Model{
     public function get_commentaire($offre)
     {
 
-            $sql = 'SELECT c.contenu,date(c.date_commentaire) as date_commentaire,u.nom,u.prenom 
+            $sql = 'SELECT c.contenu,DATE_FORMAT(c.date_commentaire, "%d/%m/%Y %H:%i:%s") as date_commentaire,u.nom,u.prenom 
                     FROM commentaire c, utilisateur u
-                    WHERE u.ID_email=c.id_user and id_offre ='.$offre;
+                    WHERE u.ID_email=c.id_user and id_offre ='.$offre.' order by date_commentaire';
 
             $query = $this->db->query($sql);
             return $query->result_array();
@@ -35,8 +35,11 @@ class Commentaire extends CI_Model{
         if(!empty($data))
         {
             $this->db->insert('commentaire', $data);
+            // insertions des données data dans la bdd
         }
 
     }
+
+
 
 }

@@ -58,7 +58,9 @@
                             }
                             ?>
                         </select>
-                        <input style="width: 48%; min-width: 150px;" class="btn" type="submit" value="Ajouter une nouvelle entreprise ?">
+                        <a href="gerer_entreprise">
+                            <input  style="width: 48%; min-width: 150px;" type="button" class="btn"  value="Ajouter une nouvelle entreprise ?"/>
+                        </a>
                     </div>
 
                     <div class="form-group" style="margin-top: 50px;">

@@ -6,7 +6,7 @@
             </div>
 
             <div class="modal-body" style="max-width: 500px; margin: auto;">
-                <form method="post" action="../admin/add_offre_h" class="form-bloc">
+                <a method="post" action="../admin/add_offre_h" class="form-bloc">
                     <input id="email_utilisateur" type="hidden" name="email_utilisateur">
 
                     <div class="form-group">
@@ -58,7 +58,9 @@
 
                             ?>
                         </select>
-                        <input style="width: 48%; min-width: 150px;" class="btn" type="submit" value="Ajouter une nouvelle entreprise ?">
+                        <a href="gerer_entreprise">
+                            <input  style="width: 48%; min-width: 150px;" type="button" class="btn"  value="Ajouter une nouvelle entreprise ?"/>
+                        </a>
                     </div>
                     <div class="form-group">
                         <label for="email_maitre">Email maitre de stage : </label>

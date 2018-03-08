@@ -7,16 +7,39 @@ class Admin extends CI_Controller{
         $this->load->helper('url_helper');
         $this->load->model('Maitre_stage');
         $this->load->model('Entreprise');
+        $this->load->model('User');
     }
     public function view(){
         $this->load->view('Admin/templates/header');
         $this->load->view('Admin/pages/home');
     }
 
+    public function add_entreprise()
+    {
+        $datas = array(
+            'nom_entreprise' => $this->input->post('nom_entreprise'),
+            'ville' => $this->input->post('Ville'),
+            'secteur' => $this->input->post('Secteur'),
+            'adresse' => $this->input->post('adresse')
+        );
+        $this->Entreprise->add_entreprise($datas);
+        header("Location: ".base_url()."/admin/gerer_entreprise");
+    }
+
+    public function update_entreprise()
+    {
+        $datas = array(
+            'nom_entreprise' => $this->input->post('nom_entreprise'),
+            'ville' => $this->input->post('ville'),
+            'secteur' => $this->input->post('secteur'),
+            'adresse' => $this->input->post('adresse')
+        );
+    }
+
     public function gerer_offre()
     {
         $data['offres'] = $this->Annonce->get_all();
-        $data['entre'] = $this->Annonce->get_entreprise();
+        $data['entre'] = $this->Annonce->get_entreprise(NULL);
         if(empty($data['offres']))
             show_404();
 
@@ -27,7 +50,7 @@ class Admin extends CI_Controller{
     public function gerer_offre_h()
     {
         $data['offres_h'] = $this->Annonce->get_annonce(NULL,1);
-        $data['entre'] = $this->Annonce->get_entreprise();
+        $data['entre'] = $this->Annonce->get_entreprise(NULL);
         if(empty($data['offres_h']))
             show_404();
 
@@ -139,6 +162,13 @@ class Admin extends CI_Controller{
             $this->Annonce->add($datas);
         }
         header("Location: ".base_url()."/admin/gerer_offre_h");
+    }
+
+    public function gerer_user()
+    {
+        $data['User'] = $this->User->get_user();
+        $this->load->view('Admin/templates/header');
+        $this->load->view('Admin/pages/gerer_user',$data);
     }
 
     public function attribue()

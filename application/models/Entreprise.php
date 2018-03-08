@@ -12,23 +12,13 @@ class Entreprise extends CI_Model{
         return $query->result_array();
     }
 
-    /**
-     * @param $id_offre
-     * @return mixed
-     */
 
-
-    public function get_commentaire($id_offre)
+    public function add_entreprise($entreprise)
     {
-
-        $sql = 'SELECT c.ID,contenu,date_commentaire 
-                    FROM commentaire c,offre_stage o 
-                    WHERE o.id ='.$id_offre;
-
-        $query = $this->db->query($sql);
-        return $query->result();
-
-
+        if(!empty($entreprise))
+        {
+            $this->db->insert('entreprise', $entreprise);
+        }
     }
 
 }

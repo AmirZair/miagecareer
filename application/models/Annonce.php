@@ -58,7 +58,7 @@
         {
           if ($entreprise === NULL)
             {
-              $query=$this->db->query("select distinct nom_entreprise from offre_stage");
+              $query=$this->db->query("select distinct nom_entreprise from entreprise");
               return $query->result_array();
             }
             $query=$this->db->query("select distinct nom_entreprise  from offre_stage o where
