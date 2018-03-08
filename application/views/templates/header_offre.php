@@ -40,10 +40,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/miagecareer">Offres</a>
+                    <a class="nav-link" href="/miagecareer/pages/view2">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url('/historique');?>">Historique</a>
+                    <a class="nav-link" href="<?php echo site_url('/historique/view2');?>">Historique</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact">Contact</a>

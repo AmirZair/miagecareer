@@ -47,7 +47,7 @@
                     <a class="nav-link" href="index.html">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="historique">Historique</a>
+                    <a class="nav-link" href="historique/view2">Historique</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">Profile</a>

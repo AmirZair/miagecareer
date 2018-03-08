@@ -1,33 +1,17 @@
 <?php
     class Historique extends CI_Controller{
         public function view($page = 'Historique'){
-            if(!file_exists(APPPATH.'views/pages/'.$page.'.php'))
+            if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
                 show_404();
-
-                $data= array(
-                    'entreprise'=>$this->Annonce->get_entreprise(1),
-                    'offre_stage' => $this->Annonce->get_annonce(NULL,1),
-                    'niveau'=>$this->Annonce->get_niveau(1),
-                    'duree'=>$this->Annonce->get_duree(1),
-                     'ville'=>$this->Annonce->get_ville(1),
-
-                );
-                $this->load->view('templates/header2');
-                $this->load->view('pages/historique', $data);
-                $this->load->view('templates/footer');
-            }
-
+            }}
 public function view2(){
             $data= array(
                 'entreprise'=>$this->Annonce->get_entreprise(1),
                 'offre_stage' => $this->Annonce->get_annonce(NULL,1),
                 'niveau'=>$this->Annonce->get_niveau(1),
                 'duree'=>$this->Annonce->get_duree(1),
-                 'ville'=>$this->Annonce->get_ville(1),
-                 'results',
-                 'links'
+                 'ville'=>$this->Annonce->get_ville(1)
             );
-
 
             $this->load->library('pagination');
 
@@ -38,32 +22,8 @@ public function view2(){
        $config["total_rows"] = $query->num_rows();
 
        $config["per_page"] = 1;
+
        $config["uri_segment"] = 3;
-
-       $config["full_tag_open"]='<ul class="pagination">';
-       $config["full_tag_close"]='</ul>';
-
-       $config["fist_tag_open"]='<li>';
-       $config["last_tag_open"]='<li>';
-
-       $config["next_tag_open"]='<li>';
-       $config["prev_tag_open"]='<li>';
-
-       $config["num_tag_open"]='<li>';
-       $config["num_tag_close"]='<li>';
-
-       $config["first_tag_close"]='</li>';
-       $config["last_tag_close"]='</li>';
-
-       $config["next_tag_close"]='</li>';
-       $config["prev_tag_close"]='</li>';
-
-       $config["cur_tag_open"]="<li class=\"active\"><span><b>";
-       $config["cur_tag_close"]='</b></span></li>';
-
-
-
-
 
        $this->pagination->initialize($config);
 
@@ -73,10 +33,10 @@ public function view2(){
        $data["results"] = $this->Annonce->fetch_offre($config["per_page"], $page2);
 
        $data["links"] = $this->pagination->create_links();
-       
+       echo $this->db->last_query();
 
             $this->load->view('templates/header2');
-            $this->load->view('pages/historique2', $data);
+            $this->load->view('pages/historique', $data);
             $this->load->view('templates/footer');
         }
 

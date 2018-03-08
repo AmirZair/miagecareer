@@ -58,7 +58,7 @@
             <?php if (empty($offre_stage)) {?>
                 <h2 class="text-center">Aucune offre ne correspond à ces critères</h2>
             <?php }?>
-            <?php foreach($offre_stage as $offre) : ?>
+            <?php foreach($results as $offre) : ?>
                 <div class="post-preview">
                     <a href="<?php echo site_url('/offre/'.$offre['id']);?>">
                         <h2 class="post-title">
@@ -75,7 +75,9 @@
                 <hr>
             <?php endforeach; ?>
             <!-- Pager -->
-            
+            <div class="pagination">
+                <?php echo $links; ?>
+            </div>
         </div>
     </div>
 </div>

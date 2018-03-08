@@ -190,6 +190,54 @@
             }
         }
 
+        public function fetch_offre($limit, $start) {
 
+       $this->db->limit($limit,$start);
+       $this->db->select('*');
+      $this->db->from('offre_stage');
+      $this->db->join('utilisateur', 'offre_stage.email_utilisateur = utilisateur.ID_email and libre=0');
+      $query = $this->db->get();
+
+
+       if ($query->num_rows() > 0) {
+
+           foreach ($query->result() as $row) {
+
+                $data[] = $row;
+
+           }
+
+           return $query->result_array();
+
+       }
+
+       return false;
+
+   }
+
+   public function fetch_offre2($limit, $start) {
+
+  $this->db->limit($limit,$start);
+  $this->db->select('*');
+ $this->db->from('offre_stage');
+ $this->db->join('utilisateur', 'offre_stage.email_utilisateur = utilisateur.ID_email and libre=1');
+ $query = $this->db->get();
+
+
+  if ($query->num_rows() > 0) {
+
+      foreach ($query->result() as $row) {
+
+           $data[] = $row;
+
+      }
+
+      return $query->result_array();
+
+  }
+
+  return false;
+
+ }
 
     }
