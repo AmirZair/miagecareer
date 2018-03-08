@@ -35,8 +35,11 @@ class Commentaire extends CI_Model{
         if(!empty($data))
         {
             $this->db->insert('commentaire', $data);
+            // insertions des données data dans la bdd
         }
 
     }
+
+
 
 }

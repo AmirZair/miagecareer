@@ -10,7 +10,7 @@ class Offre_h extends CI_Controller{
 
     public function view($offre){
     $data['offre_stage'] = $this->Annonce->get_offre_h_id($offre);
-    $data['commentaire'] = $this->Commentaire->get_commentaire($offre);
+    $data['commentaire_h'] = $this->Commentaire->get_commentaire($offre);
      if(empty($data['offre_stage']))
       show_404();
       
@@ -18,11 +18,19 @@ class Offre_h extends CI_Controller{
         $this->load->view('templates/header_offre',$data);
 
         $this->load->view('pages/offre_h', $data);
-        $this->load->view('pages/commentaire',$data);
-        $this->load->view('pages/commentaire_saisie');
+        $this->load->view('pages/commentaire_h',$data);
         $this->load->view('templates/footer');
     }
+    public function add_comm(){
+        $datas = array(
+            'id_user' => $this->input->post('id_user'),
+            'contenu' => $this->input->post('commentaire'),
+            'id_offre' => $this->input->post('id_offre')
+        );
 
+        $this->Commentaire->add_commentaire($datas); // envois des saisies du commentaires
+        header("Location: ".base_url()."offre_h/view/".$this->input->post('id_offre'));
+    }
 
 
 }
