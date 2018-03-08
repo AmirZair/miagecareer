@@ -38,7 +38,7 @@ class Admin extends CI_Controller{
     public function gerer_offre()
     {
         $data['offres'] = $this->Annonce->get_all();
-        $data['entre'] = $this->Annonce->get_entreprise();
+        $data['entre'] = $this->Annonce->get_entreprise(NULL);
         if(empty($data['offres']))
             show_404();
 
@@ -49,7 +49,7 @@ class Admin extends CI_Controller{
     public function gerer_offre_h()
     {
         $data['offres_h'] = $this->Annonce->get_annonce(NULL,1);
-        $data['entre'] = $this->Annonce->get_entreprise();
+        $data['entre'] = $this->Annonce->get_entreprise(NULL);
         if(empty($data['offres_h']))
             show_404();
 
