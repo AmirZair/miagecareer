@@ -49,16 +49,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="text-center">
-                                                <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
-                                            </div>
 
-                                        </div>
-                                    </div>
-                                </div>
                             </form>
                             <form id="register-form" action="<?php echo base_url(); ?>/login/add_user" method="post" role="form" style="display: none;">
                                 <div class="form-group">
