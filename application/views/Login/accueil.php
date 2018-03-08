@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url('/img/login.jpg')">
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -100,6 +100,8 @@
 <!------ style ---------->
 <style type="text/css">
 body {
+  
+
 padding-top: 90px;
 }
 .panel-login {
