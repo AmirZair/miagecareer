@@ -50,7 +50,7 @@
                     <a class="nav-link" href="<?php echo base_url(); ?>historique">Historique</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="add_offre" href="">ajouter offre</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>ajout_offre">ajouter offre</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="about.html">Profile</a>
@@ -67,14 +67,13 @@
 </nav>
 
 <!-- Page Header -->
-<header class="masthead" style="background-image:url('https://images5.alphacoders.com/692/thumb-1920-692621.jpg')">
+<header class="masthead" style="background-image:url('https://narkae.files.wordpress.com/2014/10/198275-universite-paris-ouest-nanterre-la-defense-510x_.jpg?w=525')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1 class="display-4">Nous contacter</h1>
-                    <span class="subheading">Avoir des questions? nous avons des réponses</span>
+                    <h1 class="display-4">Ajouter une offre</h1>
                 </div>
             </div>
         </div>

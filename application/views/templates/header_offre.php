@@ -46,6 +46,9 @@
                     <a class="nav-link" href="<?php echo site_url('/historique/view2');?>">Historique</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" id="add_offre" href="">ajouter offre</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="contact">Contact</a>
                 </li>
                 <li class="nav-item">

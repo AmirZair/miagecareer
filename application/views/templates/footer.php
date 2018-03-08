@@ -25,4 +25,6 @@
 
 <!-- Custom scripts for this template -->
 <script src="js/clean-blog.min.js"></script>
+<?php include('ajouter_offre_modal.php') ?>
+
 </html>

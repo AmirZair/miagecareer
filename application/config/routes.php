@@ -56,6 +56,7 @@ $route['offre_h/(:Any)'] = 'offre_h/view/$1';
 $route['admin'] = 'admin/view';
 $route['login'] = 'login/view';
 $route['contact']='contact/view/';
+$route['ajout_offre']='ajouter_offre/view/';
 $route['historique']='Historique/view';
 $route['default_controller'] = 'pages/view2';
 $route['(:any)']='pages/view/$1';

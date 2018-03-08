@@ -31,11 +31,11 @@
                 echo '<td>'.$u['tel'].'</td>';
                 echo '
 						 			<td style="text-align: center;" >
-						 				<a href=""> <span style="color: green;" class="glyphicon glyphicon-ok"></span> </a>
+						 				<a href="activer_compte/'.$u['ID_email'].'"> <span style="color: green;" class="glyphicon glyphicon-ok"></span> </a>
 						 			</td>';
                 echo '
 						 			<td style="text-align: center;">
-						 				<a href=""> <span style="color: red;" class="glyphicon glyphicon-remove"></span> </a>
+						 				<a href="desactiver_compte/'.$u['ID_email'].'"> <span style="color: red;" class="glyphicon glyphicon-remove"></span> </a>
 						 			</td>';
 
             }
@@ -48,7 +48,6 @@
     $(document).ready(function() {
         $('#mytable').dataTable();
     } );
-
 
     function ConfirmDelete()
     {

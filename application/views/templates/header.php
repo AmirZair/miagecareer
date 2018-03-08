@@ -39,13 +39,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/miagecareer/pages/view2">Offres</a>
+                    <a class="nav-link" href="/miagecareer">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url(); ?>historique/view2">Historique</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>historique">Historique</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Profil</a>
+                    <a class="nav-link" id="add_offre" href="">ajouter offre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact">Contact</a>

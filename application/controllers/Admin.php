@@ -171,6 +171,34 @@ class Admin extends CI_Controller{
         $this->load->view('Admin/pages/gerer_user',$data);
     }
 
+    public function activer_compte($email)
+    {
+        if(!empty($email))
+        {
+            $data = array(
+                'valider' => '1'
+            );
+            $this->db->where('ID_email', $email);
+            $this->db->update('utilisateur', $data);
+            echo'<script>alert("Compte activé");</script>';
+            echo'<script>window.location.href = "'.base_url().'/admin/gerer_user";</script>';
+        }
+    }
+
+    public function desactiver_compte($email)
+    {
+        if(!empty($email))
+        {
+            $data = array(
+                'valider' => '0'
+            );
+            $this->db->where('ID_email', $email);
+            $this->db->update('utilisateur', $data);
+            echo'<script>alert("Compte déactivé");</script>';
+            echo'<script>window.location.href = "'.base_url().'/admin/gerer_user";</script>';
+        }
+    }
+
     public function attribue()
     {
         $datas = array(

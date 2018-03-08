@@ -42,15 +42,6 @@
         $('#mytable').dataTable();
     } );
 
-
-    function ConfirmDelete()
-    {
-        var x = confirm("Voulez vous supprimer l'offre de stage ?");
-        if (x)
-            return true;
-        else
-            return false;
-    }
 </script>
 
 <!-- ***********************update********************************** -->
