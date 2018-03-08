@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body style="background-image: url('http://backgroundcheckall.com/wp-content/uploads/2017/12/good-background-images-for-login-page.jpg')">
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
@@ -55,6 +55,7 @@
                                             <div class="text-center">
                                                 <a href="https://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>
