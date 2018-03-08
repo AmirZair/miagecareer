@@ -45,7 +45,7 @@
                     <a class="nav-link" href="<?php echo base_url(); ?>historique">Historique</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Profile</a>
+                    <a class="nav-link" href="about.html">Profil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact">Contact</a>

@@ -44,7 +44,7 @@
                     <a class="nav-link" href="<?php echo base_url(); ?>historique">Historique</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Profile</a>
+                    <a class="nav-link" href="about.html">Profil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact">Contact</a>
@@ -65,7 +65,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h1 class="display-4">Historique de nos offres</h1>
-                    <span class="subheading">Historique des offres parises par nos miagistes</span>
+                    <span class="subheading">Historique des offres prises par nos miagistes</span>
                 </div>
             </div>
         </div>
