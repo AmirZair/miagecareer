@@ -7,6 +7,7 @@ class Admin extends CI_Controller{
         $this->load->helper('url_helper');
         $this->load->model('Maitre_stage');
         $this->load->model('Entreprise');
+        $this->load->model('User');
     }
     public function view(){
         $this->load->view('Admin/templates/header');
@@ -161,6 +162,13 @@ class Admin extends CI_Controller{
             $this->Annonce->add($datas);
         }
         header("Location: ".base_url()."/admin/gerer_offre_h");
+    }
+
+    public function gerer_user()
+    {
+        $data['User'] = $this->User->get_user();
+        $this->load->view('Admin/templates/header');
+        $this->load->view('Admin/pages/gerer_user',$data);
     }
 
     public function attribue()

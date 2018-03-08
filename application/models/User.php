@@ -13,6 +13,13 @@ class User extends CI_Model{
         }
     }
 
+    public function get_user()
+    {
+        $query=$this->db->query("select *  from utilisateur where
+            ID_email <> '00000000@parisnanterre.fr'");
+        return $query->result_array();
+    }
+
     public function existe($datas)
     {
 

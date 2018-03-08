@@ -15,7 +15,7 @@ class Login extends CI_Controller{
     public function add_user(){
         $datas = array(
             'ID_email' => $this->input->post('email'),
-            'mdp' => $this->input->post('password'),
+            'mdp' =>  hash('sha256', $this->input->post('password')),
             'nom' => $this->input->post('nom'),
             'prenom' => $this->input->post('prenom'),
             'tel' => $this->input->post('tel'),
