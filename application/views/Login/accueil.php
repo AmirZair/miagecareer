@@ -67,9 +67,6 @@
                                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-                                </div>
-                                <div class="form-group">
                                     <input type="text" name="nom" id="nom" tabindex="2" class="form-control" placeholder="Nom">
                                 </div>
                                 <div class="form-group">
