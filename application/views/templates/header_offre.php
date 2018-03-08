@@ -43,7 +43,7 @@
                     <a class="nav-link" href="/miagecareer/pages/view2">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo site_url('/historique/view2');?>">Historique</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>historique/view2">Historique</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="add_offre" href="">ajouter offre</a>

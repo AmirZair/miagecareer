@@ -51,8 +51,7 @@ class Admin extends CI_Controller{
     {
         $data['offres_h'] = $this->Annonce->get_annonce(NULL,1);
         $data['entre'] = $this->Annonce->get_entreprise(NULL);
-        if(empty($data['offres_h']))
-            show_404();
+
 
         $this->load->view('Admin/templates/header');
         $this->load->view('Admin/pages/gerer_h_offres',$data);

@@ -6,7 +6,7 @@
             </div>
 
             <div class="modal-body" style="max-width: 500px; margin: auto;">
-                <form method="post" action="ajouter_offre/add_offre" class="form-bloc">
+                <form method="post" action="<?php echo base_url() ?>ajouter_offre/add_offre" class="form-bloc">
                     <input id="email_utilisateur" type="hidden" name="email_utilisateur">
 
                     <div class="form-group">

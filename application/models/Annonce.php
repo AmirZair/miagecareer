@@ -189,7 +189,53 @@
                 }
             }
         }
+        /*ajout*/
+        public function fetch_offre($limit, $start) {
+            $this->db->limit($limit,$start);
+            $this->db->select('*');
+            $this->db->from('offre_stage');
+            $this->db->join('utilisateur', 'offre_stage.email_utilisateur = utilisateur.ID_email and libre=0');
+            $query = $this->db->get();
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
+                    $data[] = $row;
+                }
+                return $query->result_array();
+            }
+            return false;
+        }
+        public function fetch_offre2($limit, $start) {
+            $this->db->limit($limit,$start);
+            $this->db->select('*');
+            $this->db->from('offre_stage');
+            $this->db->join('utilisateur', 'offre_stage.email_utilisateur = utilisateur.ID_email and libre=1');
+            $query = $this->db->get();
+            if ($query->num_rows() > 0) {
+                foreach ($query->result() as $row) {
+                    $data[] = $row;
+                }
+                return $query->result_array();
+            }
+            return false;
+        }
 
+        public function ajouter_annonce($offre,$entreprise)
+        {
+            if(!empty($offre))
+            {
+                $sql="select * from entreprise where nom_entreprise='".$offre['nom_entreprise']."'";
+                $query = $this->db->query($sql);
 
+                if($query->num_rows() > 0)
+                {
+                    $this->db->insert('offre_stage', $offre);
+                }
+                else
+                {
+                    $this->db->insert('entreprise', $entreprise);
+                    $this->db->insert('offre_stage', $offre);
+                }
+            }
+        }
 
     }

@@ -75,7 +75,7 @@
                $data["links"] = $this->pagination->create_links();
 
 
-                    $this->load->view('templates/header2');
+                    $this->load->view('templates/header');
                     $this->load->view('pages/home2', $data);
                     $this->load->view('templates/footer');
                 }

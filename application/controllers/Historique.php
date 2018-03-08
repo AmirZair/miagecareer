@@ -37,7 +37,7 @@ public function view2(){
        $query = $this->db->get_where('offre_stage', array('libre' => 0));
        $config["total_rows"] = $query->num_rows();
 
-       $config["per_page"] = 1;
+       $config["per_page"] = 3;
        $config["uri_segment"] = 3;
 
        $config["full_tag_open"]='<ul class="pagination">';

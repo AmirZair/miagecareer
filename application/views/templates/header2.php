@@ -38,10 +38,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/miagecareer">Offres</a>
+                    <a class="nav-link" href="/miagecareer/pages/view2">Offres</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?php echo base_url(); ?>historique">Historique</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>historique/view2">Historique</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="add_offre" href="">ajouter offre</a>
@@ -68,7 +68,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h1 class="display-4">Historique de nos offres</h1>
-                    <span class="subheading">Historique des offres parises par nos miagistes</span>
+                    <span class="subheading">Historique des offres prises par nos miagistes</span>
                 </div>
             </div>
         </div>

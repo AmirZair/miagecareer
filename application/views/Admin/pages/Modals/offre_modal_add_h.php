@@ -6,7 +6,7 @@
             </div>
 
             <div class="modal-body" style="max-width: 500px; margin: auto;">
-                <a method="post" action="../admin/add_offre_h" class="form-bloc">
+                <form method="post" action="../admin/add_offre_h" class="form-bloc">
                     <input id="email_utilisateur" type="hidden" name="email_utilisateur">
 
                     <div class="form-group">
@@ -51,17 +51,18 @@
                         <select id="entreprise" name="entreprise" class="form-control height" required="required">
                             <option disabled selected value></option>
                             <?php
-
+                            if(!empty($entre)){
                                 foreach ($entre as $e) {
                                     echo '<option value="'.$e['nom_entreprise'].'">'.$e['nom_entreprise'].'</option>';
                                 }
-
+                            }
                             ?>
                         </select>
                         <a href="gerer_entreprise">
                             <input  style="width: 48%; min-width: 150px;" type="button" class="btn"  value="Ajouter une nouvelle entreprise ?"/>
                         </a>
                     </div>
+
                     <div class="form-group">
                         <label for="email_maitre">Email maitre de stage : </label>
                         <input id="email" name="email" class="form-control" required="required" type="email"></input>
