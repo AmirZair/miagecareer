@@ -92,7 +92,10 @@
 <!------ style ---------->
 <style type="text/css">
 body {
-  
+  background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 100% top;
+      background-attachment: fixed;
 
 padding-top: 90px;
 }

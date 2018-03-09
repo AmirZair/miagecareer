@@ -12,6 +12,10 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>lib/Admin/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>lib/Admin/css/datetimepicker.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>lib/Admin/css/style.css">
+    <style>
+    body { padding-top:20px; }
+.panel-body .btn:not(.btn-block) { width:100%;margin-bottom:10px; }
+    </style>
 
     <script type="text/javascript" src="<?php echo base_url(); ?>lib/Admin/js/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>lib/Admin/js/bootstrap.min.js"></script>
@@ -65,7 +69,7 @@
                 </li>
                 <li class="side-element"><a href="<?php echo base_url(); ?>admin/gerer_offre"><span class="glyphicon glyphicon-stats"> </span> <span class="icon-text">Gérer les offres</span></a></li>
                 <li class="side-element"><a href="<?php echo base_url(); ?>admin/gerer_offre_h"><span class="glyphicon glyphicon-calendar"> </span> <span class="icon-text">Gérer l'historique des offres</span></a></li>
-                <li class="side-element"><a href="<?php echo base_url(); ?>admin/gerer_user""><span class="glyphicon glyphicon-user"> </span> <span class="icon-text">Gérer les utilisateurs</span></a></li>
+                <li class="side-element"><a href="<?php echo base_url(); ?>admin/gerer_user"><span class="glyphicon glyphicon-user"> </span> <span class="icon-text">Gérer les utilisateurs</span></a></li>
                 <li class="side-element"><a href="<?php echo base_url(); ?>admin/gerer_entreprise"><span class="glyphicon glyphicon-cog"> </span> <span class="icon-text">Gérer les Entreprises</span></a></li>
                 <li class="side-element"><a href=""><span class="glyphicon glyphicon-question-sign" > </span> <span class="icon-text">Gérer les commentaires</span></a></li>
             </ul>

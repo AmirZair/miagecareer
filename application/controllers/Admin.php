@@ -10,8 +10,14 @@ class Admin extends CI_Controller{
         $this->load->model('User');
     }
     public function view(){
+      $nb=array(
+        'nbun'=>$this->Entreprise->get_nb_user(),
+        'nbal'=>$this->Entreprise->get_nb_al(),
+        'nbap'=>$this->Entreprise->get_nb_ap(),
+        'nbut'=>$this->Entreprise->get_nb_usert()
+    );
         $this->load->view('Admin/templates/header');
-        $this->load->view('Admin/pages/home');
+        $this->load->view('Admin/pages/home',$nb);
     }
 
     public function add_entreprise()
