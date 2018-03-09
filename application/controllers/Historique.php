@@ -1,5 +1,11 @@
 <?php
     class Historique extends CI_Controller{
+
+        public function __construct(){
+            parent::__construct();
+            $this->load->library('session');
+        }
+
         public function view($page = 'Historique'){
             if(!file_exists(APPPATH.'views/pages/'.$page.'.php'))
                 show_404();

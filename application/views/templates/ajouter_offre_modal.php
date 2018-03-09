@@ -83,7 +83,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>lib/Admin/css/datetimepicker.min.css">
 
 
-<script type="text/javascript" src="<?php echo base_url(); ?>lib/Admin/js/datetimepicker.min.js"></script>
+<script type="text/javascript" src="<?php  echo base_url(); ?>lib/Admin/js/datetimepicker.min.js"></script>
 <script src="//cdn.ckeditor.com/4.8.0/basic/ckeditor.js"></script>
 <script src="//cdn.ckeditor.com/4.8.0/basic/ckeditor.js"></script>
 <script type="text/javascript">
@@ -96,9 +96,9 @@
             $('#date_debut2').datetimepicker({format: 'yyyy-mm-dd',autoclose: true, minView: 2});
             CKEDITOR.replace('mission_desc2');
 
-            $('#email_utilisateur').val('00000000@parisnanterre.fr'); /*à remplacer par la variable de saission*/
+            $('#email_utilisateur').val('<?php echo $this->session->userdata['ID_email'] ?>'); /*à remplacer par la variable de saission*/
         });
-
+        $('#email_utilisateur').val('<?php echo $this->session->userdata['ID_email'] ?>');
     });
 </script>
 

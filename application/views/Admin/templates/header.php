@@ -1,3 +1,8 @@
+<?php
+if (!isset($this->session->userdata['ID_email'])) {
+    header("location: login");
+}
+?>
 <!DOCTYPE html>
 <html>
 <!-- My head parameters -->
@@ -50,7 +55,7 @@
             <p class="user-text no-margin">Session ouverte pour : <br> Admin</p>
         </div>
         <div class="navbar-brand logout">
-            <a href="../compte/logout">
+            <a href="<?php echo base_url(); ?>login/logout">
                 <span class="glyphicon glyphicon-log-in"></span> Logout
             </a>
         </div>

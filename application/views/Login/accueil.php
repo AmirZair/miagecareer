@@ -35,9 +35,9 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-12">
-                            <form id="login-form" action="https://phpoll.com/login/process" method="post" role="form" style="display: block;">
+                            <form id="login-form" action="<?php echo base_url(); ?>/login/login" method="post" role="form" style="display: block;">
                                 <div class="form-group">
-                                    <input type="text" name="ID_email" id="ID_email" tabindex="1" class="form-control" placeholder="Email@parisnanterre.fr">
+                                    <input type="email" name="ID_email" id="ID_email" tabindex="1" class="form-control" placeholder="Email@parisnanterre.fr">
                                 </div>
                                 <div class="form-group">
                                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
@@ -92,10 +92,12 @@
 <!------ style ---------->
 <style type="text/css">
 body {
-  background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 100% top;
-      background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
 
 padding-top: 90px;
 }

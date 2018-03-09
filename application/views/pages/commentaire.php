@@ -62,7 +62,7 @@
 
         <script type="text/javascript">
 
-            $('#id_user').val('37008708@parisnanterre.fr'); /*à remplacer par la variable de saission*/
+            $('#id_user').val('<?php echo $this->session->userdata['ID_email'] ?>'); /*à remplacer par la variable de saission*/
             $('#id_offre').val( <?php echo $offre_stage['id'];?>);
 
         </script>

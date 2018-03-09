@@ -48,13 +48,10 @@
                     <a class="nav-link" id="add_offre" href="">ajouter offre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Profile</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Se déconnecter</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>login/logout">Se déconnecter</a>
                 </li>
             </ul>
         </div>

@@ -19,12 +19,16 @@
 
 <!-- Custom scripts for this template -->
 <script src="<?php echo base_url(); ?>/lib/js/clean-blog.min.js"></script>
-<script src="js/jqBootstrapValidation.js"></script>
+
 
 <script src="js/contact_me.js"></script>
 
 <!-- Custom scripts for this template -->
 <script src="js/clean-blog.min.js"></script>
 <?php include('ajouter_offre_modal.php') ?>
-
+<?php
+if (!isset($this->session->userdata['ID_email'])) {
+    header("location: login");
+}
+?>
 </html>

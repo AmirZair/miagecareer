@@ -53,13 +53,10 @@
                     <a class="nav-link" id="add_offre" href="">ajouter offre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">Profile</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Se déconnecter</a>
+                    <a class="nav-link" href="<?php echo base_url(); ?>login/logout">Se déconnecter</a>
                 </li>
             </ul>
         </div>
@@ -74,7 +71,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h1 class="display-4">Nous contacter</h1>
-                    <span class="subheading">Avoir des questions? nous avons des réponses</span>
+                    <span class="subheading">Vous avez des questions? nous avons des réponses</span>
                 </div>
             </div>
         </div>

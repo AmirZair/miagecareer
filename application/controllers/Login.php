@@ -3,6 +3,7 @@ class Login extends CI_Controller{
 
     public function __construct(){
         parent::__construct();
+        $this->load->library('session');
         $this->load->model('User');
     }
 
@@ -58,5 +59,42 @@ class Login extends CI_Controller{
                 echo'<script>alert("Compte activé");</script>';
                 echo'<script>window.location.href = "'.base_url().'/login";</script>';
             }
+    }
+
+    public function login(){
+        $pass = hash('sha256', $this->input->post('password'));
+        $datas = array(
+            'ID_email' => $this->input->post('ID_email'),
+            'password' => $pass
+        );
+
+        $verification = $this->User->verif($datas);
+        if($verification == True){
+            $result = $this->User->get_user_s($datas);
+            // ouverture d'une session avec les ids :
+            $this->session->set_userdata($datas);
+            $var = 0;
+            if($result[0]['type_util'] == 0)
+            {
+               header("Location: ".base_url()."/admin");
+            }
+            else
+            {
+                header("Location: ".base_url());
+            }
+        }
+        else{
+            echo'<script>alert("Erreur Email ou Mot de passe");</script>';
+            $this->load->view('Login/accueil');
+        }
+    }
+
+    public function logout()
+    {
+        // delete session datas :
+        $this->session->sess_destroy();
+        // Redirection vers la page login :
+        //echo'<script>alert("Session terminée avec success !");</script>';
+        $this->load->view('Login/accueil');
     }
 }
